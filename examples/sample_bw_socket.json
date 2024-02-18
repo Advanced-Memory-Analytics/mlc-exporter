@@ -1,0 +1,101 @@
+[
+  {
+    "timestamp": "1708211901",
+    "type_system": "socket",
+    "type_node": "memory_node",
+    "units": [
+      {
+        "id": 0,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 38477.8
+          },
+          {
+            "id": 1,
+            "bandwidth": 19373.1
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 19510.3
+          },
+          {
+            "id": 1,
+            "bandwidth": 38610.4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "1708223004",
+    "type_system": "socket",
+    "type_node": "memory_node",
+    "units": [
+      {
+        "id": 0,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 10000.0
+          },
+          {
+            "id": 1,
+            "bandwidth": 20000.0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 30000.0
+          },
+          {
+            "id": 1,
+            "bandwidth": 40000.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "1708345744",
+    "type_system": "socket",
+    "type_node": "memory_node",
+    "units": [
+      {
+        "id": 0,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 60000.0
+          },
+          {
+            "id": 1,
+            "bandwidth": 70000.0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "nodes": [
+          {
+            "id": 0,
+            "bandwidth": 80000.0
+          },
+          {
+            "id": 1,
+            "bandwidth": 90000.0
+          }
+        ]
+      }
+    ]
+  }
+]
