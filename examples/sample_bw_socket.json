@@ -34,8 +34,8 @@
   },
   {
     "timestamp": "1708223004",
-    "type_system": "socket",
-    "type_node": "memory_node",
+    "system_type": "socket",
+    "node_type": "memory_node",
     "units": [
       {
         "unit_id": 0,
@@ -67,8 +67,8 @@
   },
   {
     "timestamp": "1708345744",
-    "type_system": "socket",
-    "type_node": "memory_node",
+    "system_type": "socket",
+    "node_type": "memory_node",
     "units": [
       {
         "unit_id": 0,

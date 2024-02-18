@@ -17,8 +17,8 @@
   },
   {
     "timestamp": "1708212111",
-    "type_system": "numa_node",
-    "type_node": "numa_node",
+    "system_type": "numa_node",
+    "node_type": "numa_node",
     "units": [
       {
         "unit_id": 0,
@@ -33,8 +33,8 @@
   },
   {
     "timestamp": "1708213266",
-    "type_system": "numa_node",
-    "type_node": "numa_node",
+    "system_type": "numa_node",
+    "node_type": "numa_node",
     "units": [
       {
         "unit_id": 0,
