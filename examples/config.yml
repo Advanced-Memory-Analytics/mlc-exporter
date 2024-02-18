@@ -42,6 +42,21 @@ modules:
         predator: '{ .predator }'
       values:
         population: '{ .population }'
+  
+  bandwidths:
+    metrics:
+    - name: bandwidth
+      type: object
+      help: Retrieving bandwidth in MB/sec of each node for each unit
+      path: '{ [*].units[*].nodes[*] }'
+      labels:
+        timestamp: '{ .timestamp }'
+        system_type: '{ .type_system }'
+        node_type: '{ .type_node }'
+        unit_id: '{ .units[*].id }'
+        node_id: '{ .id }'
+      values:
+        bandwidth: '{ .bandwidth }'
 
     ## HTTP connection configurations can be set in 'modules.<module_name>.http_client_config' field. For full http client config parameters, ref: https://pkg.go.dev/github.com/prometheus/common/config?tab=doc#HTTPClientConfig
     #
