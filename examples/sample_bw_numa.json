@@ -3,15 +3,21 @@
     "timestamp": "1708145764",
     "system_type": "numa_node",
     "node_type": "numa_node",
-    "units": [
+    "metrics_UUID": "7f92001c-02d7-43d4-b8ac-e4df1c67be70",
+    "bandwidths": [
       {
+        "metrics_UUID": "7f92001c-02d7-43d4-b8ac-e4df1c67be70",
+        "bandwidth_UUID": "93a63f9d-d7bb-474c-a73f-8062b2a6427a",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 40000.0
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 40000.0
+      },
+      {
+        "metrics_UUID": "7f92001c-02d7-43d4-b8ac-e4df1c67be70",
+        "bandwidth_UUID": "5223a5dc-108b-4657-841e-56a41f3557b3",
+        "unit_id": 1,
+        "node_id": 0,
+        "bandwidth": 50000.0
       }
     ]
   },
@@ -19,15 +25,14 @@
     "timestamp": "1708212111",
     "system_type": "numa_node",
     "node_type": "numa_node",
-    "units": [
+    "metrics_UUID": "4749ae58-8bc4-4c24-8f9d-0f26b04c29a7",
+    "bandwidths": [
       {
+        "metrics_UUID": "4749ae58-8bc4-4c24-8f9d-0f26b04c29a7",
+        "bandwidth_UUID": "d6d6c46c-ecb4-4e5e-a4ab-e8f38c6e0859",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 58258.6
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 58258.6
       }
     ]
   },
@@ -35,15 +40,14 @@
     "timestamp": "1708213266",
     "system_type": "numa_node",
     "node_type": "numa_node",
-    "units": [
+    "metrics_UUID": "46c482ab-9ef0-4a75-876a-65527898c31a",
+    "bandwidths": [
       {
+        "metrics_UUID": "46c482ab-9ef0-4a75-876a-65527898c31a",
+        "bandwidth_UUID": "012a1282-f200-4f7d-839b-1c914ed6128f",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 15137.3
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 15137.3
       }
     ]
   }
