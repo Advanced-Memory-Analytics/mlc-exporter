@@ -1,5 +1,7 @@
 ---
 modules:
+  # //
+  # default module for data.json
   default:
     headers:
       X-Dummy: my-test-header
@@ -40,6 +42,8 @@ modules:
         boolean: '{.some_boolean}'
         count: '{.count}' # dynamic value
 
+  # //
+  # module for animal-data.json
   animals:
     metrics:
     - name: animal
@@ -52,6 +56,8 @@ modules:
       values:
         population: '{ .population }'
   
+  # //
+  # module for sample b/w data
   # queries must be written such that the combination of name and labels represents a Prometheus time series
   bandwidths:
     metrics:
