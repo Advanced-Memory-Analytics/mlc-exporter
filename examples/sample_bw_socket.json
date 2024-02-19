@@ -3,32 +3,31 @@
     "timestamp": "1708211901",
     "system_type": "socket",
     "node_type": "memory_node",
-    "units": [
+    "instance_UUID": "eb05f158-18bb-49bc-8ac0-f17a06c5ca99",
+    "bandwidths": [
       {
+        "instance_UUID": "eb05f158-18bb-49bc-8ac0-f17a06c5ca99",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 38477.8
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 19373.1
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 38477.8
       },
       {
+        "instance_UUID": "eb05f158-18bb-49bc-8ac0-f17a06c5ca99",
+        "unit_id": 0,
+        "node_id": 1,
+        "bandwidth": 19373.1
+      },
+      {
+        "instance_UUID": "eb05f158-18bb-49bc-8ac0-f17a06c5ca99",
         "unit_id": 1,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 19510.3
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 38610.4
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 19510.3
+      },
+      {
+        "instance_UUID": "eb05f158-18bb-49bc-8ac0-f17a06c5ca99",
+        "unit_id": 1,
+        "node_id": 1,
+        "bandwidth": 38610.4
       }
     ]
   },
@@ -36,32 +35,31 @@
     "timestamp": "1708223004",
     "system_type": "socket",
     "node_type": "memory_node",
-    "units": [
+    "instance_UUID": "cd9f23fb-21ac-48d8-91e0-f3839a48791d",
+    "bandwidths": [
       {
+        "instance_UUID": "cd9f23fb-21ac-48d8-91e0-f3839a48791d",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 10000.0
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 20000.0
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 10000.0
       },
       {
+        "instance_UUID": "cd9f23fb-21ac-48d8-91e0-f3839a48791d",
+        "unit_id": 0,
+        "node_id": 1,
+        "bandwidth": 20000.0
+      },
+      {
+        "instance_UUID": "cd9f23fb-21ac-48d8-91e0-f3839a48791d",
         "unit_id": 1,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 30000.0
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 40000.0
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 30000.0
+      },
+      {
+        "instance_UUID": "cd9f23fb-21ac-48d8-91e0-f3839a48791d",
+        "unit_id": 1,
+        "node_id": 1,
+        "bandwidth": 40000.0
       }
     ]
   },
@@ -69,32 +67,31 @@
     "timestamp": "1708345744",
     "system_type": "socket",
     "node_type": "memory_node",
-    "units": [
+    "instance_UUID": "c6c688d1-f4c5-408e-8292-c96d96a9c696",
+    "bandwidths": [
       {
+        "instance_UUID": "c6c688d1-f4c5-408e-8292-c96d96a9c696",
         "unit_id": 0,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 60000.0
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 70000.0
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 60000.0
       },
       {
+        "instance_UUID": "c6c688d1-f4c5-408e-8292-c96d96a9c696",
+        "unit_id": 0,
+        "node_id": 1,
+        "bandwidth": 70000.0
+      },
+      {
+        "instance_UUID": "c6c688d1-f4c5-408e-8292-c96d96a9c696",
         "unit_id": 1,
-        "nodes": [
-          {
-            "node_id": 0,
-            "bandwidth": 80000.0
-          },
-          {
-            "node_id": 1,
-            "bandwidth": 90000.0
-          }
-        ]
+        "node_id": 0,
+        "bandwidth": 80000.0
+      },
+      {
+        "instance_UUID": "c6c688d1-f4c5-408e-8292-c96d96a9c696",
+        "unit_id": 1,
+        "node_id": 1,
+        "bandwidth": 90000.0
       }
     ]
   }

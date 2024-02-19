@@ -61,8 +61,7 @@ modules:
       path: '{ [*].bandwidths[*] }'
       epochTimestamp: '{ .timestamp }'
       labels:
-        metrics_UUID: '{ .metrics_UUID }'
-        bandwidth_UUID: '{ .bandwidth_UUID }'
+        instance_UUID: '{ .instance_UUID }'
         unit_id: '{ .unit_id }'
         node_id: '{ .node_id }'
       values:
