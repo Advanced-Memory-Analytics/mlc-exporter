@@ -1,6 +1,8 @@
 import re
 import json
 import uuid
+import sys
+import os.path
 
 # Function to parse the text and return JSON
 def parse_text_to_json(text):
@@ -35,11 +37,21 @@ def parse_text_to_json(text):
 with open('temp.txt', 'r') as file:
     text = file.read()
 
+# Saving file to mlc-exporter/examples/ directory
+directory_path = "../examples" # examples directory is exposed to exporter
+file_name = "sample.json"
+
+if not os.path.exists(directory_path):
+    print("Created /examples directory at root of mlc-exporter")
+    os.mkdir(directory_path)
+
+file_path = os.path.join(directory_path, file_name)
+
 # Parse the text to JSON
 parsed_json = parse_text_to_json(text)
 
 # Write the JSON data to a file
-with open('sample.json', 'w') as file:
+with open(file_path, 'w') as file:
     json.dump([parsed_json], file, indent=2)
 
-print("JSON data has been written to sample.json")
+print("JSON data has been written to", os.path.abspath(file_path))
