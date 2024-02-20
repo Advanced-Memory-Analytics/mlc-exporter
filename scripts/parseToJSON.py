@@ -3,14 +3,19 @@ import json
 import uuid
 import sys
 import os.path
+import time
 
 # Function to parse the text and return JSON
 def parse_text_to_json(text):
     # Find all bandwidth numbers in the text
     bandwidth_values = re.findall(r'\d+\.\d+', text)
+
+    # Remove known non-bandwidth values (e.g., buffer size)
+    known_non_bandwidth_values = {'100.000', '3.11'}
+    bandwidth_values = [value for value in bandwidth_values if value not in known_non_bandwidth_values]
     
-    # Generate a fake timestamp and a UUID for instance
-    timestamp = "1708145764"
+    # Generate a current timestamp and a UUID for instance
+    timestamp = str(int(time.time()))  # Use time.time() to get current timestamp
     instance_uuid = str(uuid.uuid4())
     
     # Create the JSON structure

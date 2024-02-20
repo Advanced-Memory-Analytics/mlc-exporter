@@ -10,4 +10,4 @@ Using all the threads from each core if Hyper-threading is enabled
 Using Read-only traffic type
 		Numa node
 Numa node	     0	
-       0	58630.7	
+       0	58449.2	
