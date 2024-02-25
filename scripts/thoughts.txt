@@ -1,0 +1,4 @@
+1. Are there any empty values similar to N/A in metrics?
+2. Will the value be an integer? Or must they all be decimals?
+
+I want to do it step by step, so I am trying to export the date to a CSV file first.

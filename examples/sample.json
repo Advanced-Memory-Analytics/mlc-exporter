@@ -1,15 +1,21 @@
 [
   {
-    "timestamp": "1708456971",
+    "timestamp": "1708841508",
     "system_type": "numa_node",
     "node_type": "numa_node",
-    "instance_UUID": "57a42c23-9737-40e2-9ed2-2aa7652be103",
+    "instance_UUID": "61ec12c1-364f-4165-be19-9bace2fa0714",
     "bandwidths": [
       {
-        "instance_UUID": "57a42c23-9737-40e2-9ed2-2aa7652be103",
+        "instance_UUID": "61ec12c1-364f-4165-be19-9bace2fa0714",
         "unit_id": 0,
         "node_id": 0,
         "bandwidth": 58449.2
+      },
+      {
+        "instance_UUID": "61ec12c1-364f-4165-be19-9bace2fa0714",
+        "unit_id": 0,
+        "node_id": 1,
+        "bandwidth": 72340.5
       }
     ]
   }

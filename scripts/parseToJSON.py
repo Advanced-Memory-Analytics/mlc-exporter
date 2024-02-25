@@ -1,62 +1,46 @@
 import re
-import json
-import uuid
-import sys
-import os.path
-import time
 
-# Function to parse the text and return JSON
-def parse_text_to_json(text):
-    # Find all bandwidth numbers in the text
-    bandwidth_values = re.findall(r'\d+\.\d+', text)
+def extract_to_csv(text, csv_file_path):
+    # Extract bandwidth value
+    matrix_section = re.search(r'Numa node.*?(\s+\d.*)', text, re.DOTALL)
+    if not matrix_section:
+        return None
 
-    # Remove known non-bandwidth values (e.g., buffer size)
-    known_non_bandwidth_values = {'100.000', '3.11'}
-    bandwidth_values = [value for value in bandwidth_values if value not in known_non_bandwidth_values]
-    
-    # Generate a current timestamp and a UUID for instance
-    timestamp = str(int(time.time()))  # Use time.time() to get current timestamp
-    instance_uuid = str(uuid.uuid4())
-    
-    # Create the JSON structure
-    data = {
-        "timestamp": timestamp,
-        "system_type": "numa_node",
-        "node_type": "numa_node",
-        "instance_UUID": instance_uuid,
-        "bandwidths": []
-    }
-    
-    # Assume unit_id and node_id are both 0 for this example
-    for i, bandwidth in enumerate(bandwidth_values):
-        data["bandwidths"].append({
-            "instance_UUID": instance_uuid,
-            "unit_id": 0,
-            "node_id": 0,
-            "bandwidth": float(bandwidth)
-        })
-    
-    return data
+    matrix_lines = matrix_section.group(1).strip().split('\n')
 
-# Read the contents of temp.txt into a variable
-with open('temp.txt', 'r') as file:
-    text = file.read()
+    # Build CSV data
+    csv_lines = []
+    for line in matrix_lines:
+        # Modify regular expression to match integers and decimals
+        values = re.findall(r'\d+\.?\d*', line)
+        csv_line = ','.join(values)
+        csv_lines.append(csv_line)
 
-# Saving file to mlc-exporter/examples/ directory
-directory_path = "../examples" # examples directory is exposed to exporter
-file_name = "sample.json"
+    # Save to CSV file
+    with open(csv_file_path, 'w') as csv_file:
+        for line in csv_lines:
+            csv_file.write(line + '\n')
 
-if not os.path.exists(directory_path):
-    print("Created /examples directory at root of mlc-exporter")
-    os.mkdir(directory_path)
+# Sample text
+text = """
+Intel(R) Memory Latency Checker - v3.11
+Command line parameters: --bandwidth_matrix 
 
-file_path = os.path.join(directory_path, file_name)
+Using buffer size of 100.000MiB/thread for reads and an additional 100.000MiB/thread for writes
+*** Unable to modify prefetchers (try executing 'modprobe msr')
+*** So, enabling random access for latency measurements
+Measuring Memory Bandwidths between nodes within system 
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using Read-only traffic type
+        Numa node
+Numa node         0        1    
+       0    58449.2  250000
+       1      72340.5  184293
+"""
 
-# Parse the text to JSON
-parsed_json = parse_text_to_json(text)
+# Call function and save CSV
+csv_file_path = 'output.csv'
+extract_to_csv(text, csv_file_path)
 
-# Write the JSON data to a file
-with open(file_path, 'w') as file:
-    json.dump([parsed_json], file, indent=2)
-
-print("JSON data has been written to", os.path.abspath(file_path))
+print(f"Data has been saved to {csv_file_path}.")
