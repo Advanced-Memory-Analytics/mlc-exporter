@@ -65,9 +65,8 @@ modules:
       type: object
       help: Bandwidth in MB/sec of each node for each unit
       path: '{ [*].bandwidths[*] }'
-      epochTimestamp: '{ .timestamp }'
       labels:
-        instance_UUID: '{ .instance_UUID }'
+        run_uuid: '{ .run_uuid }'
         unit_id: '{ .unit_id }'
         node_id: '{ .node_id }'
       values:
