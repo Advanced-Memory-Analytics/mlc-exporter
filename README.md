@@ -2,7 +2,7 @@
 Experimental Prometheus exporter which scrapes remote JSON metrics collected from [Intel's Memory Latency Checker (MLC) tool](https://www.intel.com/content/www/us/en/developer/articles/tool/intelr-memory-latency-checker.html)
 
 ## Usage
-Run the following commands from the mlc-exporter directory:
+Run the following commands from the ``mlc-exporter`` directory:
 ```
 $ make 
 $ ./json_exporter --config.file examples/config.yml &

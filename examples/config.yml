@@ -64,13 +64,21 @@ modules:
     - name: bandwidth
       type: object
       help: Bandwidth in MB/sec of each node for each unit
-      path: '{ [*].bandwidths[*] }'
+      path: '{ [*] }'
       labels:
+        vm_name: '{ .vm_name }'
         run_uuid: '{ .run_uuid }'
         unit_id: '{ .unit_id }'
         node_id: '{ .node_id }'
       values:
         bandwidth: '{ .bandwidth }'
+      # path: '{ [*].bandwidths[*] }'
+      # labels:
+      #   run_uuid: '{ .run_uuid }'
+      #   unit_id: '{ .unit_id }'
+      #   node_id: '{ .node_id }'
+      # values:
+      #   bandwidth: '{ .bandwidth }'
 
     ## HTTP connection configurations can be set in 'modules.<module_name>.http_client_config' field. For full http client config parameters, ref: https://pkg.go.dev/github.com/prometheus/common/config?tab=doc#HTTPClientConfig
     #
